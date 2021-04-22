@@ -22,7 +22,7 @@ def CompletarTableroOrden (secuencia, tablero):
         t+=1
     return tablero
 
-secuencia=[1,3,5,7]
+secuencia=[1,3,5,7,4,1]
 
 def DibujarTablero (tablero):
     for x in tablero:
