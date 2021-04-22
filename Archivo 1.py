@@ -7,6 +7,16 @@ def TableroVacio ():
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
         ]
+
+def ContenidoColumna (nrocolumna,tablero):
+    columna = []
+    for row in tablero:
+        celda = row[nrocolumna - 1]
+        columna.append(celda)
+    return columna 
+        
+         
+
 def soltarFichaEnColumna (ficha, column, tablero):
         for row in range(6, 0, -1):
                 if tablero[row - 1][column - 1] == 0:
@@ -22,7 +32,7 @@ def CompletarTableroOrden (secuencia, tablero):
         t+=1
     return tablero
 
-secuencia=[1,3,5,7,4,1]
+secuencia=[1,3,5,7,4,1,5,5]
 
 def DibujarTablero (tablero):
     for x in tablero:
