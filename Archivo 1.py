@@ -46,10 +46,17 @@ def TiroValido (secuencia):
             q=0
     return q
 
+tablero = []
+
 if TiroValido (secuencia)==1:
-    DibujarTablero( CompletarTableroOrden(secuencia, TableroVacio()))
+    tablero= (CompletarTableroOrden(secuencia, TableroVacio()))
+    DibujarTablero(tablero)
 else:
  print ("El rango ingresado no es valido")
+
+print (ContenidoColumna(5,tablero))
+
+
         
 
 
