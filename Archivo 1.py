@@ -1,3 +1,4 @@
+#comentario del tablero
 def TableroVacio ():
     return[
         [0, 0, 0, 0, 0, 0, 0],
