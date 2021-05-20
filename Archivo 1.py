@@ -1,4 +1,4 @@
-#comentario del tablero
+#comentario del tablero 
 def TableroVacio ():
     return[
         [0, 0, 0, 0, 0, 0, 0],
@@ -33,11 +33,31 @@ def CompletarTableroOrden (secuencia, tablero):
         t+=1
     return tablero
 
-secuencia=[1,3,5,7,4,1,5,5]
+secuencia=[1,3,4,6]
 
 def DibujarTablero (tablero):
-    for x in tablero:
-        print (x)
+    for row in range(len(tablero)):
+        for cell in range(len(tablero[0])):
+            if cell == 0:
+                print(' | ',end = '')
+            if cell == 6:
+                print ('|',end = '')
+            else:
+                print(str(tablero[row][cell]) + ' ', end = '')
+        print('')
+    print(" + - - - - - - + ")
+    #for x in tablero:
+        #c=0
+        #for a in x:
+            #if(c % 7 == 0)or c == 0:
+               # print("|")
+           # if(a == 0):
+               # print('   ', end = '')
+            #else:
+                #print(' %s ' %a, end = '')
+            #c+=1
+        #print('')
+            
 
 def TiroValido (secuencia):
     for s in secuencia:
@@ -55,7 +75,7 @@ if TiroValido (secuencia)==1:
 else:
  print ("El rango ingresado no es valido")
 
-print (ContenidoColumna(5,tablero))
+#print (ContenidoColumna(5,tablero))
 
 
         
