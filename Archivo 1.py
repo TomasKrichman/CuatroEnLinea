@@ -33,7 +33,10 @@ def CompletarTableroOrden (secuencia, tablero):
         t+=1
     return tablero
 
-secuencia=[1,3,4,6]
+secuencia_texto = input("Ingrese la secuencia de numeros:")
+secuencia=[]
+for items in secuencia_texto.split (','):
+    secuencia.append(int(items))
 
 def DibujarTablero (tablero):
     for row in range(len(tablero)):
