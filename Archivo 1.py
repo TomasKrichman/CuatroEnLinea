@@ -9,14 +9,17 @@ def TableroVacio ():
         [0, 0, 0, 0, 0, 0, 0],
         ]
 
-def ContenidoColumna (nrocolumna,tablero):
+def ContenidoColumna (nrocolumna, tablero):
     columna = []
     for row in tablero:
         celda = row[nrocolumna - 1]
         columna.append(celda)
     return columna 
-        
-         
+
+def ContenidoFila (nrofila, tablero):
+    if nrofila == 0:
+        nrofila = 1
+    return tablero[nrofila - 1]
 
 def soltarFichaEnColumna (ficha, column, tablero):
         for row in range(6, 0, -1):
@@ -72,8 +75,11 @@ tablero = []
 if TiroValido (secuencia)==1:
     tablero= (CompletarTableroOrden(secuencia, TableroVacio()))
     DibujarTablero(tablero)
+    print(ContenidoFila (0, tablero))
 else:
  print ("El rango ingresado no es valido")
+
+ 
 
 #print (ContenidoColumna(5,tablero))
 
